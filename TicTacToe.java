@@ -9,7 +9,7 @@ import java.lang.* ;
 *@author Anna Metsapelto
 *
 */
-public class TicTacToe {
+public class TicTacToe extends Application{
     // Initializing static variables.
         static int rows = 0 ;
         static int cols = 0 ;
@@ -21,7 +21,11 @@ public class TicTacToe {
         /** The main method where the board size and number of winning marks are determined and the game is played.
         */
         public static void main(String [] args) {
-        Scanner input = new Scanner(System.in) ;
+            launch(args);
+        }
+        public void start(Stage stage) {
+        }
+            /**        Scanner input = new Scanner(System.in) ;
         while (rows<3 || rows>30) {
             try {
             // The player is asked how many rows the board has
@@ -86,7 +90,7 @@ public class TicTacToe {
                 } catch (NumberFormatException a) {
                     System.out.println("You didn't enter a number.") ;
                 }
-            }
+            }*/
             // The board size is determined here
         board = new char [rows][cols] ;
         initializeBoard() ;
